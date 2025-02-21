@@ -1,0 +1,269 @@
+body {
+    font-family: 'Mukta Malar', Arial;
+}
+
+.titel {
+    background-color: rgb(89, 89, 224);
+    border-radius: 8px;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+:root {
+
+    --input-color: #99A3BA;
+    --input-border: #CDD9ED;
+    --input-background: #fff;
+    --input-placeholder: #CBD1DC;
+
+    --input-border-focus: #275EFE;
+
+    --group-color: var(--input-color);
+    --group-border: var(--input-border);
+    --group-background: #EEF4FF;
+
+    --group-color-focus: #fff;
+    --group-border-focus: var(--input-border-focus);
+    --group-background-focus: #678EFE;
+
+}
+
+.form-field {
+    display: block;
+    width: 100%;
+    padding: 8px 16px;
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    border-radius: 6px;
+    color: var(--input-color);
+    border: 1px solid var(--input-border);
+    background: var(--input-background);
+    transition: border .3s ease;
+    &::placeholder {
+        color: var(--input-placeholder);
+        font-size: 17px;
+    }
+    &:focus {
+        outline: none;
+        border-color: var(--input-border-focus);
+    }
+}
+
+.form-group {
+    position: relative;
+    align-items: center;
+    display: flex;
+    width: 50%;
+    margin: 0 auto; /* Center the form group */
+    & > span,
+    .form-field {
+        white-space: nowrap;
+        
+        display: block;
+        &:not(:first-child):not(:last-child) {
+            border-radius: 0;
+        }
+        &:first-child {
+            border-radius: 6px 0 0 6px;
+        }
+        &:last-child {
+            border-radius: 0 6px 6px 0;
+        }
+        &:not(:first-child) {
+            margin-left: -1px;
+        }
+    }
+    .form-field {
+        position: relative;
+        z-index: 1;
+        flex: 1 1 auto;
+        width: 1%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    & > span {
+        text-align: center;
+        padding: 8px 12px;
+        font-size: 19px;
+        line-height: 25px;
+        color: var(--group-color);
+        background: var(--group-background);
+        border: 1px solid var(--group-border);
+        transition: background .3s ease, border .3s ease, color .3s ease;
+    }
+    &:focus-within {
+        & > span {
+            color: var(--group-color-focus);
+            background: var(--group-background-focus);
+            border-color: var(--group-border-focus);
+        }
+    }
+}
+
+html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+* {
+    box-sizing: inherit;
+    &:before,
+    &:after {
+        box-sizing: inherit;
+    }
+}
+Center
+body {
+    min-height: 100vh;
+    font-family: 'Mukta Malar', Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #F5F9FF;  
+    .form-group {
+        max-width: 360px;
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+}
+
+button {
+    background-color: rgb(89, 89, 224);
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 17px;
+    display: block;
+    margin: 0 auto; 
+    margin-top: 30px;
+    color: white;
+}
+
+button:hover {
+    background-color: rgb(70, 70, 200);
+}
+
+button::shadow {
+    cursor: pointer;
+}
+
+
+.output {
+   font-size: 17px;
+   background-color:  rgb(89, 89, 224);
+   border-radius: 8px;
+   color: white;
+   margin-top: 20px;
+   padding: 10px; 
+}
+
+#tabelleTitel {
+    visibility: hidden;
+}
+
+.table-container {
+    display: flex;
+    justify-content: center; /* Horizontal zentrieren */
+    align-items: center; /* Vertikal zentrieren */
+    width: 100%; /* Volle Breite */
+    max-width: 800px; /* Maximale Breite festlegen */
+    margin: 0 auto; /* Container zentrieren */
+    
+}
+
+table {
+    width: 100%; /* Volle Breite des Containers */
+    max-width: 800px; /* Maximale Breite der Tabelle */
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    color: black;
+    margin: 0 auto; /* Zentrierung der Tabelle */
+    padding: 0; /* Kein Padding */
+}
+   
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: rgb(89, 89, 224);
+    color: white;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e0e0e0;
+}
+
+#tabelle {
+    width: 100%; /* Volle Breite des Containers */
+    justify-content: center; /* Horizontal zentrieren */
+    align-items: center; /* Vertikal zentrieren */
+    margin: 0 auto; /* Automatische Ränder für horizontale Zentrierung */
+    padding-right: 100px;
+}
+
+.tabellenAnzeige {
+    background-color: rgb(89, 89, 224);
+    visibility: hidden;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 10px auto; /* Center the element */
+    max-width: 50%;
+   
+}
+
+@media screen and (max-width: 600px) {
+    .form-group {
+        width: 100%;
+    }
+
+    #tabelle {
+        margin-right: 210px;
+    }
+    .form-field {
+        width: 100%;
+    }
+    button {
+        width: 100%;
+    }
+    .table-container {
+        width: 100%;
+    }
+    .tabellenAnzeige {
+        width: 100%;
+    }
+    
+}
+
+#footer {
+    background-color: rgb(89, 89, 224);
+    border-radius: 8px;
+    text-align: center;
+    padding-right: 20px;
+    padding-left: 20px;
+    color: white;
+    padding-top: 20px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    visibility: hidden;
+}

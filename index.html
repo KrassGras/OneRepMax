@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hauptseite</title>
+</head>
+<body>
+   <h1 class="titel">One Rep Max Rechner</h1>
+   <div class="userinterface">
+     
+    <div class="form-group">
+        <span>Bodyweight</span>
+        <input class="form-field" type="text" placeholder="Bodyweight in KGs">
+    </div>
+
+    <div class="form-group">
+        <span>Trainingsgewicht</span>
+        <input class="form-field" type="text" placeholder="Gestämmtes Gewicht">
+    </div>
+
+    <div class="form-group">
+        <span>Anzahl der Wiederholungen</span>
+        <input class="form-field" type="text" placeholder="Wiederholungen">
+    </div>
+    
+    <button id="berechne" onclick="berechneOneRepMax()">One Rep Max berechnen</button>
+    <div class="output">
+        <p id="onerepmax"></p>
+        <p id="vielfache"></p>
+    </div>
+    
+    <section class="tabellenAnzeige">
+        <p id="tabelleTitel">Deine Trainingstabelle:</p>
+        <div id="tabelle"></div>
+    </section>
+   </div>
+    
+   <button onclick="showAnswer()"> Was ist der One Rep Max? </button>
+    <footer id="footer">
+        
+        <h3>Was ist der One Rep Max</h3>
+        <p>
+
+            Der One-Rep-Max (kurz: 1RM) ist das maximale Gewicht, das du bei einer Übung (z. B. Bankdrücken, Kniebeugen oder Kreuzheben) einmal korrekt bewegen kannst. Es ist ein Maß für deine maximale Kraft und wird oft verwendet, um Trainingsgewichte zu berechnen oder Fortschritte zu messen.
+            
+            Beispiel:
+            Wenn du beim Bankdrücken 100 kg einmal schaffst, aber nicht zweimal, ist dein 1RM = 100 kg.
+            
+            Mit dem 1RM kannst du dein Training besser planen, z. B. wie viel Gewicht du für 8 oder 10 Wiederholungen verwenden sollst. 🏋️‍♂️💪</p>
+</body>
+<script src="main.js"></script>
+</html>
